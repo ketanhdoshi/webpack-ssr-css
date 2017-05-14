@@ -7,7 +7,8 @@ import React, { PropTypes } from 'react'
 import ModalButton from '../components/ModalButton'
 import TryModalButton from '../components/TryModalButton'
 import NewModalButton from '../components/NewModalButton'
-import s from './MatchesView.scss';
+
+import s from '../scss/MatchesView.scss';
 
 const MatchesView = ({ status, list, post, onClickCb, fetchCb }) => (
   <div>

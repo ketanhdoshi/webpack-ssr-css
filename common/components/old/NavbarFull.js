@@ -16,7 +16,6 @@ const NavbarFull = (props) => (
           <li role="presentation"><Link to="/payment" activeStyle={{ color: 'red' }}>Payment</Link></li>
           <li role="presentation"><Link to="/hello">Hello</Link></li>
           <li role="presentation"><Link to="/login">Login</Link></li>
-          <li role="presentation"><Link to="/counter">Counter</Link></li>
         </ul>
 
         {props.children}

@@ -4,7 +4,7 @@
 // -----------------------------------------------------------------
 import React, { PropTypes } from 'react'
 
-import s from '../scss/SidebarNav.scss'
+import s from '../../scss/SidebarNav.scss'
 
 const SidebarNav = (props) => (
     

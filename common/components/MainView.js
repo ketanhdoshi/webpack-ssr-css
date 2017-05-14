@@ -6,10 +6,10 @@
 // -----------------------------------------------------------------
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
-import Navbar from './Navbar'
-import Footer from './Footer'
-import Sidebar from './Sidebar'
-import ContentHeader from './ContentHeader'
+import Navbar from './widgets/Navbar'
+import Footer from './widgets/Footer'
+import Sidebar from './widgets/Sidebar'
+import ContentHeader from './widgets/ContentHeader'
 
 import s from '../scss/Main.scss'
 

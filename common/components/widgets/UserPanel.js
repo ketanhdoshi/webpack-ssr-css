@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------
 import React, { PropTypes } from 'react'
 
-import s from '../scss/UserPanel.scss'
+import s from '../../scss/UserPanel.scss'
 
 const UserPanel = (props) => (
     

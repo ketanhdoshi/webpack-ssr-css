@@ -8,7 +8,7 @@ import SidebarNav from './SidebarNav'
 import SidebarMenu from './SidebarMenu'
 import SidebarSubMenuItem from './SidebarSubMenuItem'
 
-import s from '../scss/Sidebar.scss'
+import s from '../../scss/Sidebar.scss'
 
 const Sidebar = () => (
     
@@ -17,8 +17,8 @@ const Sidebar = () => (
         <SidebarSearch />
         <SidebarNav>
             <SidebarMenu icon="fa-dashboard" title="Dashboard" subMenu="subDashboard">
-                <SidebarSubMenuItem>Dashboard 1</SidebarSubMenuItem>
-                <SidebarSubMenuItem>Dashboard 2</SidebarSubMenuItem>
+                <SidebarSubMenuItem linkto="/dashboard1">Dashboard 1</SidebarSubMenuItem>
+                <SidebarSubMenuItem linkto="/dashboard2">Dashboard 2</SidebarSubMenuItem>
             </SidebarMenu>                        
             <SidebarMenu icon="fa-files-o" title="Layout" subMenu="subLayout" badges={[{label: 3, bg: "bg-red"}, {label: 16, bg: "bg-aqua"}]}>
                 <SidebarSubMenuItem>Layout 1</SidebarSubMenuItem>
@@ -31,9 +31,7 @@ const Sidebar = () => (
             <SidebarMenu icon="fa-calendar" title="Calendar" subMenu="subCalendar" badges={[{label: 12, bg: "bg-green"}, {label: 7, bg: "bg-yellow"}]}>
                 <SidebarSubMenuItem linkto="/login">Cal 1</SidebarSubMenuItem>
                 <SidebarSubMenuItem>Cal 2</SidebarSubMenuItem>
-            </SidebarMenu>            
-            <SidebarMenu icon="fa-list" title="Stories" badges={[{label: 5, bg: "bg-blue"}, {label: 8, bg: "bg-yellow"}, {label: 14, bg: "bg-aqua"}]} />
-            <SidebarMenu icon="fa-paperclip" title="Saved" />
+            </SidebarMenu>           
             <SidebarMenu icon="fa-refresh" title="Refresh" />
             <SidebarMenu icon="fa-pie-chart" title="Charts" subMenu="subChart">
                 <SidebarSubMenuItem>ChartJS</SidebarSubMenuItem>
@@ -48,6 +46,12 @@ const Sidebar = () => (
             </SidebarMenu>                        
             <SidebarMenu icon="fa-th" title="Widgets" badges={[{label: "New", bg: "bg-green"}]} />
             <SidebarMenu linkto="/bsview" icon="fa-list-alt" title="React-Bootstrap" />
+            <SidebarMenu icon="fa-car" title="Redux Experiments" subMenu="subReduxExps">
+                <SidebarSubMenuItem linkto="/matches">Matches</SidebarSubMenuItem>
+                <SidebarSubMenuItem linkto="/shortlist">Shortlist</SidebarSubMenuItem>
+            </SidebarMenu>
+            <SidebarMenu linkto="/payment" icon="fa-money" title="Payment" badges={[{label: 5, bg: "bg-blue"}, {label: 8, bg: "bg-yellow"}, {label: 14, bg: "bg-aqua"}]} />
+            <SidebarMenu linkto="/login" icon="fa-sign-in" title="Login" />
         </SidebarNav>
     </div>
     )

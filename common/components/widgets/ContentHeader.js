@@ -4,7 +4,7 @@
 // -----------------------------------------------------------------
 import React, { PropTypes } from 'react'
 
-import s from '../scss/ContentHeader.scss'
+import s from '../../scss/ContentHeader.scss'
 
 const ContentHeader = (props) => (
     <section className={s.contentHeader}>

@@ -4,7 +4,7 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 
-import s from '../scss/SidebarNav.scss'
+import s from '../../scss/SidebarNav.scss'
 
 const SidebarMenu = (props) => {
     let aOpt = {}

@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------
 import React, { PropTypes } from 'react'
 
-import s from '../scss/SidebarSearch.scss'
+import s from '../../scss/SidebarSearch.scss'
 
 const SidebarSearch = () => (
     
