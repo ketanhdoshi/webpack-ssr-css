@@ -12,6 +12,7 @@ import AppContainer from '../containers/AppContainer'
 import MainContainer from '../containers/MainContainer'
 import { MatchesContainer, getMatches } from '../containers/MatchesContainer'
 import PaymentView from '../components/PaymentView'
+import ModalView from '../components/ModalView'
 import ShortlistContainer from '../containers/ShortlistContainer'
 import LoginContainer from '../containers/LoginContainer'
 import BsView from '../components/bs/BsView';
@@ -42,6 +43,7 @@ export const getRoutes = (store) => {
                     <Route path="/matches" component={MatchesContainer} onEnter={getMatches(store)}/>
                     <Route path="/shortlist" component={ShortlistContainer}/>
                     <Route path="/payment" component={PaymentView}/>
+                    <Route path="/modals" component={ModalView}/>
                 </Route>
                 {/* These are the non-logged-in pages */}
                 <Route path="/login" component={LoginContainer}/>

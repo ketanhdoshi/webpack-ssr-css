@@ -50,6 +50,7 @@ const Sidebar = () => (
                 <SidebarSubMenuItem linkto="/matches">Matches</SidebarSubMenuItem>
                 <SidebarSubMenuItem linkto="/shortlist">Shortlist</SidebarSubMenuItem>
             </SidebarMenu>
+            <SidebarMenu linkto="/modals" icon="fa-bicycle" title="Modal Experiments" />
             <SidebarMenu linkto="/payment" icon="fa-money" title="Payment" badges={[{label: 5, bg: "bg-blue"}, {label: 8, bg: "bg-yellow"}, {label: 14, bg: "bg-aqua"}]} />
             <SidebarMenu linkto="/login" icon="fa-sign-in" title="Login" />
         </SidebarNav>

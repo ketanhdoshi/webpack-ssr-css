@@ -4,7 +4,7 @@
 // Instead we will likely use the React-Bootstrap components
 // -----------------------------------------------------------------
 import React, { PropTypes } from 'react'
-import Modal from '../components/Modal'
+import Modal from './Modal'
 
 var ModalButton = React.createClass({
     getInitialState: function() {
