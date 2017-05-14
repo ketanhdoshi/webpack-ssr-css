@@ -1,4 +1,7 @@
-c// to invoke actions which call the backend API to fetch data, how to pass 
+// -----------------------------------------------------------------
+// Container component for the example Matches page
+// Written as an example during the initial Redux experimentation
+// to invoke actions which call the backend API to fetch data, how to pass 
 // props to the presentational component and how to handle user events 
 // generated in that component.
 // Clean up the logic here and re-write it based on the actual 

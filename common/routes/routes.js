@@ -17,7 +17,7 @@ import NavbarSub from '../components/NavbarSub'
 import PaymentView from '../components/PaymentView'
 import ShortlistContainer from '../containers/ShortlistContainer'
 import LoginContainer from '../containers/LoginContainer'
-import Hello from '../Hello';
+import BsView from '../components/bs/BsView';
 
 var history;
 if (typeof(window) !== 'undefined'){
@@ -39,6 +39,7 @@ export const getRoutes = (store) => {
                 {/* All logged-in routes must be inside MainContainer */}
                 <Route component={MainContainer}>
                     <Route path="/home" component={Home}/>
+                    <Route path="/bsview" component={BsView}/>
                     {/* Everything below Home including NavbarFull and 
                         NavbarMini and all child pages are older pages
                         from the initial pre-CSS experiments and may be
@@ -48,8 +49,7 @@ export const getRoutes = (store) => {
                     */}
                     <Route component={NavbarFull}>
                         {/* Most Logged-in pages use the full Navbar */}
-                        <Route path="/dashboard" component={Dashboard}/>
-                        <Route path="/hello" component={Hello}/>
+                        <Route path="/dashboard" component={Dashboard}/>                        
                         <Route component={NavbarSub}>
                             <Route path="/matches" component={MatchesContainer} onEnter={getMatches(store)}/>
                             <Route path="/shortlist" component={ShortlistContainer}/>

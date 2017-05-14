@@ -29,7 +29,7 @@ const Sidebar = () => (
                 </SidebarMenu>            
             </SidebarMenu>            
             <SidebarMenu icon="fa-calendar" title="Calendar" subMenu="subCalendar" badges={[{label: 12, bg: "bg-green"}, {label: 7, bg: "bg-yellow"}]}>
-                <SidebarSubMenuItem>Cal 1</SidebarSubMenuItem>
+                <SidebarSubMenuItem linkto="/login">Cal 1</SidebarSubMenuItem>
                 <SidebarSubMenuItem>Cal 2</SidebarSubMenuItem>
             </SidebarMenu>            
             <SidebarMenu icon="fa-list" title="Stories" badges={[{label: 5, bg: "bg-blue"}, {label: 8, bg: "bg-yellow"}, {label: 14, bg: "bg-aqua"}]} />
@@ -47,6 +47,7 @@ const Sidebar = () => (
                 <SidebarSubMenuItem>Sliders</SidebarSubMenuItem>
             </SidebarMenu>                        
             <SidebarMenu icon="fa-th" title="Widgets" badges={[{label: "New", bg: "bg-green"}]} />
+            <SidebarMenu linkto="/bsview" icon="fa-list-alt" title="React-Bootstrap" />
         </SidebarNav>
     </div>
     )

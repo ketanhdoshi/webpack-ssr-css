@@ -19,7 +19,7 @@ const Navbar = (props) => (
             <div id="navbar" className="collapse navbar-collapse">
                 <ul className="nav navbar-nav navbar-right">
                     <li><a href="#" data-toggle="offcanvas">Off-Canvas</a></li>
-                    <li><a href="#">Dashboard</a></li>
+                    <li><Link to="/dashboard">Dashboard</Link></li>
                     <li><a href="#">Help</a></li>
                 </ul>
             </div>

@@ -17,9 +17,9 @@ import BsPagination from './BsPagination'
 import BsButton from './BsButton'
 import BsList from './BsList'
 
-import s from './Hello.scss';
+import s from '../../scss/BsView.scss';
 
-function Hello(props) {
+function BsView(props) {
     return (
         <div className={s.root}>
             Wowman {props.name}
@@ -37,4 +37,4 @@ function Hello(props) {
     );
 }
 
-export default Hello;
+export default BsView;

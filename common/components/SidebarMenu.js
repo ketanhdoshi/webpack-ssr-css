@@ -2,6 +2,7 @@
 // Presentational component for a menu in the Sidebar
 // -----------------------------------------------------------------
 import React, { PropTypes } from 'react'
+import { Link } from 'react-router'
 
 import s from '../scss/SidebarNav.scss'
 
@@ -14,10 +15,11 @@ const SidebarMenu = (props) => {
             'className': "collapsed"
         }        
     }
+    let linkto = props.linkto ? props.linkto : "#"
     
     return (
         <li>        
-            <a href="#" {...aOpt} >
+            <Link to={linkto} {...aOpt} >
                 <i className={"fa " + props.icon}></i>
                 <span className="collapse in hidden-xs">{props.title}
                     { props.subMenu ? <i className="fa fa-angle-left pull-right"></i> : null }
@@ -28,7 +30,7 @@ const SidebarMenu = (props) => {
                         : null
                     }
                 </span>
-            </a>
+            </Link>
             { props.subMenu ?
                 <ul className={"nav collapse " + s.sidebarSub} id={props.subMenu}>
                     {props.children}
