@@ -8,17 +8,29 @@
 // functionality needed in the app
 // -----------------------------------------------------------------
 import { connect } from 'react-redux'
+
+// Presentational component
 import MatchesView from '../components/MatchesView'
+
+// Action helpers
 import { getMatchesReqAction, 
          getMatchesSuccessAction, 
          getPostReqAction, 
          getPostSuccessAction } 
      from '../actions/action.js'
 
+// -----------------------------------------------------------------
+// onEnter callback, which is called by the router before entering
+// the Matches route 
+// -----------------------------------------------------------------
 const getMatches = (store) => {
   return (nextState, replace) => {
     // Do something with your store
+    
+    // The URL for the route that we are about to enter
     console.log (nextState.location.pathname)
+    
+    // Action to get the list of Matches
     getMatchesReqAction (store.dispatch, 6)
   }
 };

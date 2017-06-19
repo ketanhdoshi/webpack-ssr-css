@@ -10,6 +10,7 @@ import Dashboard2 from '../components/Dashboard2'
 import Home from '../components/Home'
 import AppContainer from '../containers/AppContainer'
 import MainContainer from '../containers/MainContainer'
+import { PropertiesContainer } from '../containers/PropertiesContainer'
 import { MatchesContainer, getMatches } from '../containers/MatchesContainer'
 import PaymentView from '../components/PaymentView'
 import ModalView from '../components/ModalView'
@@ -41,6 +42,7 @@ export const getRoutes = (store) => {
                     <Route path="/dashboard2" component={Dashboard2}/>
                     <Route path="/bsview" component={BsView}/>
                     <Route path="/matches" component={MatchesContainer} onEnter={getMatches(store)}/>
+                    <Route path="/properties" component={PropertiesContainer}/>
                     <Route path="/shortlist" component={ShortlistContainer}/>
                     <Route path="/payment" component={PaymentView}/>
                     <Route path="/modals" component={ModalView}/>
