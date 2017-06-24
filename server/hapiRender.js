@@ -11,8 +11,8 @@ import { match, RouterContext } from 'react-router'
 import configureStore from '../common/store/configureStore'
 import { getRoutes } from '../common/routes/routes'
 
-function serverRender(req, res) {
-    console.info (req.url)
+function hapiRender(request, reply) {
+    console.info ('here it is ', request.url.path)
 
     // Compile an initial state and create a new Redux store instance
     const preloadedState = { }
@@ -20,11 +20,11 @@ function serverRender(req, res) {
 
     var html = ''
     var routes = getRoutes (store)
-    match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
+    match({ routes, location: request.url.path }, (error, redirectLocation, renderProps) => {
         if (error) {
-            res.status(500).send(error.message)
+            reply(error.message).code(500);
         } else if (redirectLocation) {
-            res.redirect(302, redirectLocation.pathname + redirectLocation.search)
+            reply().code(302).redirect(redirectLocation.pathname + redirectLocation.search)
         } else if (renderProps) {
             // Render the component to a string
             html = renderToString(
@@ -40,7 +40,7 @@ function serverRender(req, res) {
             // Use the html template in file 'index.ejs'
             // The React rendered output replaces the %html% tag
             // in the template
-            res.render('index',
+            reply.view('index',
                     {
                         html: html,
                         state: JSON.stringify(finalState).replace(/</g, '\\x3c'),
@@ -51,15 +51,9 @@ function serverRender(req, res) {
             // your "not found" component or route respectively, and send a 404 as
             // below, if you're using a catch-all route.
 
-            res.status(404).send('Not found')
+            reply('Not found').code(404)
         }
     })
 }
 
-export default serverRender
-
-/*
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-*/
+export default hapiRender

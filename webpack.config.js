@@ -50,7 +50,10 @@ const serverConfig = {
   target: 'node',
   externals: [nodeExternals()],
   entry: [
-    'server/serverRender.js'
+    // For some reason only one of these work at a time. So comment out hapi
+    // or express depending on which one you want to use
+    'server/hapiRender.js',
+    //'server/expressRender.js',
   ],
   output: {
     path: path.join(__dirname, 'built/'),

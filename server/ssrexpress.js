@@ -11,7 +11,7 @@ import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
 import webpackConfig from '../webpack.config'
 
-import serverRender from '../built/serverbundle.js';
+import expressRender from '../built/serverbundle.js';
 
 const app = express();
 const port = 3000;
@@ -35,7 +35,7 @@ app.set('views', viewsDir)
 app.set('view engine', 'ejs')
 
 // Serve normal requests with our handleRender function
-app.get('*', serverRender);
+app.get('*', expressRender);
 
 app.listen(port, (error) => {
   if (error) {
